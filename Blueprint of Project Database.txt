@@ -1,0 +1,103 @@
+// UserProfile
+// Projects
+// ProjectCollaboraion
+// Article
+// Resources
+// Books
+// Videos
+// Notes
+// Questions
+// Contests
+
+userCollection = {
+    _id : String,
+    profileImg : URL,
+    fname : String,
+    lname : String,
+    username : String,
+    about : String,
+    linkedIn : String,
+    programme : String,
+    department : String,
+    year : Number,
+    email : String,
+    password : String,
+    skills : [],
+    questionUpvotes : [],
+    repliesUpvotes : [], 
+}
+
+projectDisplayCollection = {
+    
+    contributors : [], //Array of UserCollections 
+    projectName : String,
+    tags : [],
+    description : String,
+    thumbnail : Buffer,
+    video : Buffer,
+    projectLink : URL
+}
+
+projectCollaborationCollection = {
+    avatar : Buffer,
+    projectLeader : userCollection,
+    projectName : String,
+    tags : [],
+    description : String,
+    contact : String,    //Email
+    date : Date
+}
+
+articleCollection = {
+    
+    thumbnail : Buffer,
+    title : String,
+    content : String,
+    author : String,
+    link : URL,
+}
+
+materialsCollection = {
+    subject : String,
+    type : String,
+    
+    title : String,
+    link : URL,
+
+    author : String,
+    edition : String,
+    thumbnail : Buffer,
+
+    channel : String,
+    source : String,
+}
+
+questionColleciton = {
+    
+    asker : userCollection,
+    question : String,
+    description : String,
+    code : String,
+    upvotes : Number,
+    askDate : Date,
+    replies : []
+}
+
+Reply = {
+    replier : userCollection,
+    replyDate : Date,
+    upvotes : Number,
+    description : String,
+    code : String
+}
+
+contestCollection = {
+    name : String,
+    type : String,
+    startDate : Date,
+    endDate : Date,  
+    projectLogo : Buffer,
+    contestLink : URL,
+    resultLink : URL,
+    solutionLink : URL,
+}
